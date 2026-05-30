@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { CgMenuGridR } from "react-icons/cg";
-import burgerImg from "../../assets/images/burger.png";
+import burgerImg from "../../assets/images/burger2.webp";
 import smokeTexture from "../../assets/textures/smoke.png";
 import noiseTexture from "../../assets/textures/noiseTexture.png";
 import bgTexture from "../../assets/textures/bg-texture.png";
