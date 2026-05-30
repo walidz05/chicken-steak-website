@@ -68,8 +68,7 @@ function Gallerie() {
               <div
                 className="
                   absolute
-                  inset-0
-                  bg-black/20
+                  inset-0       
                   group-hover:bg-black/50
                   transition-all
                   duration-500
