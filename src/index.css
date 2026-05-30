@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b0b0b;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("./assets/fonts/Pacifico-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BebasNeue", sans-serif;
+  src: url("./assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Petemoss", sans-serif;
+  src: url("../assets/fonts/Petemoss-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Anton", sans-serif;
+  src: url("../assets/fonts/Anton-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url("../assets/fonts/Raleway-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url("../assets/fonts/Raleway-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url("../assets/fonts/Raleway-Bold.ttf");
+  font-weight: 700;
+}
