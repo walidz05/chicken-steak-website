@@ -43,7 +43,7 @@ function Hero() {
           absolute
           inset-0
           z-[2]
-          opacity-10
+          opacity-[0.8]
           mix-blend-screen
           bg-cover
           bg-center
