@@ -4,7 +4,6 @@ import burgerImg from "../../assets/images/burger.png";
 import smokeTexture from "../../assets/textures/smoke.png";
 import noiseTexture from "../../assets/textures/noiseTexture.png";
 import bgTexture from "../../assets/textures/bg-texture.png";
-import dirty from "../../assets/textures/dirty.webp";
 import Button from "../ui/Button";
 
 function Hero() {
@@ -13,6 +12,7 @@ function Hero() {
       {/* ================= BACKGROUND TEXTURE ================= */}
       <div className="absolute inset-0 z-0">
         <img
+          loading="lazy"
           src={bgTexture}
           alt=""
           className="
@@ -259,6 +259,7 @@ function Hero() {
 
             {/* BURGER IMAGE */}
             <img
+              loading="lazy"
               src={burgerImg}
               alt="Chicken Steak Burger"
               className="

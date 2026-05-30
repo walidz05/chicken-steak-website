@@ -52,7 +52,12 @@ function Franchise() {
               </Button>
             </div>
             <div>
-              <img className="w-full" src={imgFranchise} alt="" />
+              <img
+                loading="lazy"
+                className="w-full"
+                src={imgFranchise}
+                alt=""
+              />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import Heading from "../../ui/Heading";
 import { dtProduits } from "../../../data/produits";
-import fire2 from "../../../assets/textures/fire2.webp";
+import fire2 from "../../../assets/textures/bgfire.webp";
 import Card from "./Card";
 function Produits() {
   return (

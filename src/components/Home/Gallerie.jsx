@@ -51,6 +51,7 @@ function Gallerie() {
             >
               {/* IMAGE */}
               <img
+                loading="lazy"
                 src={item.image}
                 alt={item.title}
                 className="

@@ -10,7 +10,7 @@ function Concept() {
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-[40px] sm:gap-[24px]">
           <div className="">
-            <img src={imgConcept} alt="" className="w-full" />
+            <img loading="lazy" src={imgConcept} alt="" className="w-full" />
           </div>
           <div className="flex flex-col gap-3 items-baseline">
             <Heading
