@@ -1,5 +1,6 @@
 // Footer.jsx
 
+import { memo } from "react";
 import { RiInstagramLine } from "react-icons/ri";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { RiTiktokLine } from "react-icons/ri";
@@ -9,7 +10,7 @@ import { RiPhoneLine } from "react-icons/ri";
 import { RiMailLine } from "react-icons/ri";
 import { RiMapPinLine } from "react-icons/ri";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-dark text-white px-6 md:px-16 sm:py-[30px] container">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -140,4 +141,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default memo(Footer);

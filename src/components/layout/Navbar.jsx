@@ -3,6 +3,7 @@ import { FaRegUser } from "react-icons/fa";
 import Button from "../ui/Button";
 import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
+import { memo } from "react";
 const Navbar = ({ open, setOpen }) => {
   return (
     <header
@@ -80,4 +81,4 @@ const Navbar = ({ open, setOpen }) => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

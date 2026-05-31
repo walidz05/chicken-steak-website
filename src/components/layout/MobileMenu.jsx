@@ -1,4 +1,3 @@
-import React from "react";
 import NavLinks from "./NavLinks";
 import { FaRegUser } from "react-icons/fa";
 import Button from "../ui/Button";
