@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { CgMenuGridR } from "react-icons/cg";
 import burgerImg from "../../assets/images/burger2.webp";
-import smokeTexture from "../../assets/textures/smoke.png";
-import noiseTexture from "../../assets/textures/noiseTexture.png";
-import bgTexture from "../../assets/textures/bg-texture.png";
+import smokeTexture from "../../assets/textures/smoke.webp";
+import noiseTexture from "../../assets/textures/noiseTexture.webp";
+import bgTexture from "../../assets/textures/bg-texture.webp";
 import Button from "../ui/Button";
 
 function Hero() {
@@ -19,7 +19,7 @@ function Hero() {
             w-full
             h-full
             object-cover
-            opacity-10
+            opacity-5
           "
         />
       </div>
@@ -43,7 +43,7 @@ function Hero() {
           absolute
           inset-0
           z-[2]
-          opacity-[0.8]
+          opacity-[0.5]
           mix-blend-screen
           bg-cover
           bg-center
@@ -88,9 +88,9 @@ function Hero() {
         <div className="grid lg:grid-cols-2 gap-[60px] items-center w-full">
           {/* ================= LEFT CONTENT ================= */}
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col gap-[28px]"
           >
             {/* PREMIUM BADGE */}
@@ -195,7 +195,7 @@ function Hero() {
                   uppercase
                   tracking-wide
                   font-semibold
-                  hover:scale-105
+                
                   hover:shadow-[0_0_40px_rgba(255,122,0,0.45)]
                   transition-all
                   duration-200
@@ -223,6 +223,7 @@ function Hero() {
                   hover:border-primary
                   hover:bg-primary/10
                   hover:text-white
+                  hover:shadow-[0_0_40px_rgba(255,122,0,0.45)]
                   transition-all
                   duration-200
                 "
@@ -237,7 +238,7 @@ function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             className="
               relative
               flex
@@ -265,13 +266,13 @@ function Hero() {
               className="
                 relative
                 z-10
-                w-full
+               w-[650px]
                 hidden
                 sm:flex
-                max-w-[760px]
                 object-contain
                 drop-shadow-[0_0_90px_rgba(255,122,0,0.35)]
               "
+              fetchPriority="high"
             />
           </motion.div>
         </div>

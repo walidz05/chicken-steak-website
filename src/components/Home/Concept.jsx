@@ -45,6 +45,7 @@ function Concept() {
                   hover:border-primary
                   hover:bg-primary/10
                   hover:text-white
+                  hover:shadow-[0_0_40px_rgba(255,122,0,0.45)]
                   transition-all
                   duration-200
                 "

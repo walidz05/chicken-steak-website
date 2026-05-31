@@ -144,26 +144,27 @@ function Gallerie() {
         <div className="flex justify-center mt-8">
           <Button
             className="
-              text-[10px]
-              uppercase
-              bg-dark
-              border-2
-              border-white/50
-              text-white
-              px-[32px]
-              py-[10px]
-              rounded
-              font-medium
-
-              hover:border-primary
-              hover:text-hover
-              hover:shadow-[0_0_30px_rgba(255,122,0,0.3)]
-
-              transition-all
-              duration-300
-            "
+                  btn
+                  btn-secondary
+                  flex
+                  items-center
+                  gap-3
+                  px-8
+                  py-4
+                  rounded-xl
+                  border
+                  border-white/10
+                  bg-white/5
+                  backdrop-blur-md
+                  hover:border-primary
+                  hover:bg-primary/10
+                  hover:text-white
+                  hover:shadow-[0_0_40px_rgba(255,122,0,0.45)]
+                  transition-all
+                  duration-200
+                "
           >
-            VOIR TOUTE LA GALERIE
+            voir toute la gallerie
           </Button>
         </div>
       </div>

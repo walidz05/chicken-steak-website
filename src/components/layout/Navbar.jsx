@@ -34,23 +34,32 @@ const Navbar = ({ open, setOpen }) => {
         </nav>
 
         <Button
-          className="hidden lg:flex items-center gap-2
-                text-[12px]
-                uppercase
-                border-2
-              border-primary/70
-              text-white
-              px-[32px]
-              py-[16px]
-              rounded
-              font-medium
-              hover:scale-105
-              transition-all
-              duration-300
-              "
+          className="
+          hidden
+                  btn
+                  btn-secondary
+                  sm:flex
+                  items-center
+                  gap-3
+                  px-8
+                  py-4
+                  rounded-xl
+                  border
+                  border-primary
+                  bg-dark
+                  backdrop-blur-[80px]
+                  hover:border-primary
+                  hover:bg-primary/10
+                  hover:text-white
+                  transition-all
+                  duration-200
+                  uppercase
+                  hover:shadow-[0_0_40px_rgba(255,122,0,0.45)]
+
+                "
         >
-          <FaRegUser className="text-white" />
-          devenir partenaire
+          <FaRegUser className="text-[16px]" />
+          DEVENIR PaRTENaIRE
         </Button>
 
         {open ? (

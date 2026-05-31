@@ -1,4 +1,4 @@
-import bgCard from "../../../assets/textures/bg-texture.png";
+import bgCard from "../../../assets/textures/bg-texture.webp";
 function Card({ item }) {
   return (
     <>

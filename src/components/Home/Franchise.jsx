@@ -1,6 +1,6 @@
 import Heading from "../ui/Heading";
 import imgFranchise from "../../assets/images/franchise.webp";
-import bg from "../../assets/textures/smoke.png";
+import bg from "../../assets/textures/smoke.webp";
 import Button from "../ui/Button";
 function Franchise() {
   return (
