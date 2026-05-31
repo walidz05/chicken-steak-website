@@ -260,7 +260,6 @@ function Hero() {
 
             {/* BURGER IMAGE */}
             <img
-              loading="lazy"
               src={burgerImg}
               alt="Chicken Steak Burger"
               className="
