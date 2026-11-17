@@ -22,7 +22,7 @@ function WhyChooseUs() {
         }
       />
 
-      <div className="container grid grid-cols-1 sm:grid-cols-4 gap-[20px] sm:gap-[24px] mt-[40px]">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[24px] mt-[40px]">
         {whychoseDt &&
           whychoseDt.map((item) => {
             const Icon = item.icon;

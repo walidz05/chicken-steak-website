@@ -28,7 +28,7 @@ function Concept() {
               sélectionnons les meilleurs ingrédients pour offrir des recettes
               uniques, généreuses et inoubliables.
             </p>
-            <Button
+            <Button to="/about"
               className="
                   btn
                   btn-secondary

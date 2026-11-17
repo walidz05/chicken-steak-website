@@ -8,7 +8,7 @@ import Button from "../ui/Button";
 
 function Hero() {
   return (
-    <section className="relative  h-[90vh] sm:min-h-screen overflow-hidden bg-black  py-[60px]">
+    <section className="relative  min-h-[90vh] sm:min-h-screen overflow-hidden bg-black  py-[60px]">
       {/* ================= BACKGROUND TEXTURE ================= */}
       <div className="absolute inset-0 z-0">
         <img
@@ -185,7 +185,7 @@ function Hero() {
             {/* BUTTONS */}
             <div className="flex flex-wrap gap-[24px] mt-2">
               {/* BTN PRIMARY */}
-              <Button
+              <Button to="/about"
                 className="flex items-center gap-2
                   btn
                   btn-primary
@@ -206,7 +206,7 @@ function Hero() {
 
               {/* BTN SECONDARY */}
 
-              <Button
+              <Button to="/menu"
                 className="
                   btn
                   btn-secondary

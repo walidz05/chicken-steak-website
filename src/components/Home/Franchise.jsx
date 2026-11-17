@@ -33,7 +33,7 @@ function Franchise() {
                 des emplacements stratégiques : centres commerciaux, complexes
                 et zones à fort potentiel.
               </p>
-              <Button
+              <Button to="/franchise"
                 className="flex items-center gap-2
                 text-[12px]
                 uppercase

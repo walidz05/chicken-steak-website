@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { navLinks } from "./navbarData";
-const NavLinks = ({ color, hoverColor }) => {
+const NavLinks = ({ color, hoverColor, onNavigate }) => {
   return (
     <>
       <>
         {navLinks.map((item) => (
-          <a
+          <NavLink
             key={item.id}
-            href={item.path}
+            to={item.path}
+            onClick={onNavigate}
             className={`
                       ${color}
                       uppercase
@@ -21,7 +22,7 @@ const NavLinks = ({ color, hoverColor }) => {
                     `}
           >
             {item.title}
-          </a>
+          </NavLink>
         ))}
       </>
     </>

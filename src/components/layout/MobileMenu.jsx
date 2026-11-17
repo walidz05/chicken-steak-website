@@ -1,55 +1,21 @@
+import { useEffect } from "react";
 import NavLinks from "./NavLinks";
-import { FaRegUser } from "react-icons/fa";
 import Button from "../ui/Button";
-const MobileMenu = ({ open }) => {
-  return (
-    <>
-      <div
-        className={`lg:hidden fixed top-0 left-0 bg-primary   opacity-1 z-50  
-    duration-100
-    ease-in-out  ${
-      open
-        ? "translate-x-0  w-[350px] h-[100vh]"
-        : "-translate-x-full opacity-0 w-0 "
-    }`}
-      >
-        <div className="container p-10">
-          <h1
-            className="mb-5
-                  font-Anton
-                  text-[24px]
-                  tracking-wider
-                  text-white font-extrabold"
-          >
-            CHICKEN
-            <span className="text-black">STEAK</span>
-          </h1>
-          <nav className="flex flex-col gap-10  ">
-            <NavLinks color="text-white" hoverColor="hover:text-white/50" />
-          </nav>
-
-          <Button
-            className="flex items-center gap-2
-                text-[12px]
-                uppercase
-                bg-black
-                border-2
-                  border-primary/70
-               text-white
-                px-[32px]
-                py-[16px]
-                rounded
-                font-medium
-                mt-5
-              "
-          >
-            <FaRegUser className="text-white" />
-            devenir partenaire
-          </Button>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default MobileMenu;
+export default function MobileMenu({ open, setOpen }) {
+  useEffect(() => {
+    if (!open) return;
+    const close = (event) => { if (event.key === "Escape") setOpen(false); };
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", close);
+    return () => { document.body.style.overflow = previous; window.removeEventListener("keydown", close); };
+  }, [open, setOpen]);
+  if (!open) return null;
+  return <div className="lg:hidden fixed inset-0 z-40 pt-[90px]">
+    <button className="absolute inset-0 bg-black/70" aria-label="Fermer le menu" onClick={() => setOpen(false)} />
+    <div id="mobile-navigation" className="relative bg-primary w-[min(350px,100%)] h-full overflow-y-auto p-8">
+      <nav aria-label="Navigation mobile" className="flex flex-col gap-7"><NavLinks color="text-white" hoverColor="hover:text-white/70" onNavigate={() => setOpen(false)} /></nav>
+      <Button to="/franchise" onClick={() => setOpen(false)} className="inline-flex bg-dark text-white mt-8">Devenir partenaire</Button>
+    </div>
+  </div>;
+}
