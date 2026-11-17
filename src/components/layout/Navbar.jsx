@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { FaRegUser } from "react-icons/fa";
 import Button from "../ui/Button";
@@ -20,7 +21,7 @@ const Navbar = ({ open, setOpen }) => {
                   "
     >
       <div className="container h-[90px] flex items-center   justify-between ">
-        <h1
+        <Link to="/Accueil" aria-label="Chicken Steak — Accueil"
           className="
                   font-BebasNeue
                   text-[24px]
@@ -29,12 +30,12 @@ const Navbar = ({ open, setOpen }) => {
         >
           CHICKEN
           <span className="text-primary font-BebasNeue">STEAK</span>
-        </h1>
+        </Link>
         <nav className="hidden lg:flex items-center gap-10">
           <NavLinks color="text-white" />
         </nav>
 
-        <Button
+        <Button to="/franchise"
           className="
           hidden
                   btn
@@ -63,19 +64,9 @@ const Navbar = ({ open, setOpen }) => {
           DEVENIR PaRTENaIRE
         </Button>
 
-        {open ? (
-          <IoCloseOutline
-            onClick={() => setOpen(!open)}
-            className="flex sm:hidden cursor-pointer"
-            color="white"
-          />
-        ) : (
-          <CiMenuFries
-            onClick={() => setOpen(!open)}
-            className="flex sm:hidden cursor-pointer"
-            color="white"
-          />
-        )}
+        <button type="button" className="lg:hidden text-white text-2xl p-2" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}>
+          {open ? <IoCloseOutline /> : <CiMenuFries />}
+        </button>
       </div>
     </header>
   );

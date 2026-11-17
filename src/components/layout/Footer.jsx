@@ -1,19 +1,15 @@
 // Footer.jsx
 
 import { memo } from "react";
-import { RiInstagramLine } from "react-icons/ri";
-import { RiFacebookCircleLine } from "react-icons/ri";
-import { RiTiktokLine } from "react-icons/ri";
-import { RiWhatsappLine } from "react-icons/ri";
-
-import { RiPhoneLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { navLinks } from "./navbarData";
 import { RiMailLine } from "react-icons/ri";
 import { RiMapPinLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white px-6 md:px-16 sm:py-[30px] container">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-dark text-white px-6 md:px-16 py-[30px] container">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12">
         {/* Logo */}
         <div>
           <h2 className="uppercase font-black leading-none">
@@ -36,20 +32,8 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-3 text-sm text-gray-400">
-            {[
-              "Accueil",
-              "À Propos",
-              "Menu",
-              "Franchise",
-              "Galerie",
-              "Contact",
-            ].map((item, index) => (
-              <li
-                key={index}
-                className="hover:text-orange-500 transition duration-300 cursor-pointer"
-              >
-                {item}
-              </li>
+            {navLinks.map((item) => (
+              <li key={item.path} className="hover:text-orange-500 transition duration-300"><Link to={item.path}>{item.title}</Link></li>
             ))}
           </ul>
         </div>
@@ -62,13 +46,8 @@ const Footer = () => {
 
           <div className="space-y-4 text-sm text-gray-400">
             <div className="flex items-center gap-3">
-              <RiPhoneLine className="text-orange-500 text-lg" />
-              <span>+212 6 00 00 00 00</span>
-            </div>
-
-            <div className="flex items-center gap-3">
               <RiMailLine className="text-orange-500 text-lg" />
-              <span>contact@chickensteak.ma</span>
+              <a className="break-all hover:text-orange-500" href="mailto:contact@chickensteak.ma">contact@chickensteak.ma</a>
             </div>
 
             <div className="flex items-center gap-3">
@@ -77,36 +56,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-4 mt-7">
-            <a
-              href="#"
-              className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 transition duration-300"
-            >
-              <RiInstagramLine className="text-xl" />
-            </a>
-
-            <a
-              href="#"
-              className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 transition duration-300"
-            >
-              <RiFacebookCircleLine className="text-xl" />
-            </a>
-
-            <a
-              href="#"
-              className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 transition duration-300"
-            >
-              <RiTiktokLine className="text-xl" />
-            </a>
-
-            <a
-              href="#"
-              className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 transition duration-300"
-            >
-              <RiWhatsappLine className="text-xl" />
-            </a>
-          </div>
         </div>
 
         {/* Right */}
@@ -117,25 +66,25 @@ const Footer = () => {
             </h3>
 
             <p className="text-gray-400 text-sm leading-7 max-w-[250px]">
-              Suivez-nous sur nos réseaux pour découvrir nos nouveautés et nos
-              offres.
+              Une question sur nos recettes ou un projet de partenariat ?
+              Échangez avec notre équipe via la page Contact.
             </p>
           </div>
 
           <div className="flex gap-6 text-xs text-gray-500 mt-10">
-            <a
-              href="#"
+            <Link
+              to="/mentions-legales"
               className="hover:text-orange-500 transition duration-300"
             >
               Mentions légales
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/confidentialite"
               className="hover:text-orange-500 transition duration-300"
             >
               Politique de confidentialité
-            </a>
+            </Link>
           </div>
         </div>
       </div>

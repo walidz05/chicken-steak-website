@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Heading from "../ui/Heading";
 import Button from "../ui/Button";
 
@@ -37,7 +38,7 @@ function Gallerie() {
       <div className="mt-[60px]">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {galleryItems.map((item) => (
-            <div
+            <Link to="/galerie" aria-label={`Voir la galerie : ${item.title}`}
               key={item.id}
               className="
                 group
@@ -136,13 +137,13 @@ function Gallerie() {
 
                 <div className="w-[50px] h-[3px] bg-primary mt-2 rounded-full" />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* BUTTON */}
         <div className="flex justify-center mt-8">
-          <Button
+          <Button to="/galerie"
             className="
                   btn
                   btn-secondary

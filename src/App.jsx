@@ -9,12 +9,13 @@ function App() {
   const [open, setOpen] = useState(false);
   return (
     <>
+      <a href="#main-content" className="skip-link">Aller au contenu</a>
       <ScrollToTop />
       <Navbar open={open} setOpen={setOpen} />
       <MobileMenu open={open} setOpen={setOpen} />
-      <div className="py-[60px]">
+      <main id="main-content" className="py-[60px]">
         <Router />
-      </div>
+      </main>
       <Footer />
     </>
   );

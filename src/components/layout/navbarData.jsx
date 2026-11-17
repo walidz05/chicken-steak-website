@@ -26,7 +26,7 @@ export const navLinks = [
     path: "/galerie",
   },
   {
-    id: 5,
+    id: 6,
     title: "Contact",
     path: "/contact",
   },
